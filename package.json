@@ -6,7 +6,6 @@
     "start": "next start"
   },
   "dependencies": {
-    "@faustwp/core": "^3.2.3",
     "@headlessui/react": "^2.2.0",
     "@heroicons/react": "^2.2.0",
     "@radix-ui/react-navigation-menu": "^1.2.5",
