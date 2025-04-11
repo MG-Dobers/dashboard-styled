@@ -7,6 +7,7 @@ import {
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
+import { signOut } from 'next-auth/react';
 
 const links = [
     { name: 'Kokpit', href: '/dashboard', icon: HomeIcon },
@@ -15,6 +16,7 @@ const links = [
 
 export default function NavLinks() {
     const pathname = usePathname();
+    const handleLogout = () => signOut({ callbackUrl: '/' });
 
     return (
         <>
@@ -36,6 +38,12 @@ export default function NavLinks() {
                     </Link>
                 );
             })}
+            <button
+                onClick={handleLogout}
+                className="bg-red-500 hover:bg-red-600 text-white rounded px-4 py-2"
+            >
+                Logout
+            </button>
         </>
     );
 }

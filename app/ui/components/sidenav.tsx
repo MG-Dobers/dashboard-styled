@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import NavLinks from './nav-links';
 
+
 export default function SideNav() {
     return (
         <div className="flex h-full flex-col py-4">
