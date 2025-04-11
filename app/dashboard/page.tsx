@@ -5,6 +5,7 @@ import { fetchFilteredProducts } from '../lib/data';
 import { Suspense } from 'react';
 import { Metadata } from 'next';
 import { CardsSkeleton } from '../ui/skeletons';
+import UserDetails from '../ui/components/user-details';
 
 export const metadata: Metadata = {
   title: 'Kokpit',
@@ -25,6 +26,7 @@ export default async function Page(props: {
   return (
     <div className="mx-auto container">
       <div className="flex w-full items-center justify-between">
+        <UserDetails />
         <h1 className="text-2xl">Twoje materiały</h1>
       </div>
       <div className="mt-4 flex items-center justify-between gap-2 md:mt-8">

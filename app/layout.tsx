@@ -1,6 +1,7 @@
 import '@/app/ui/global.css';
 import { quicksand } from '@/app/ui/fonts';
 import { Metadata } from 'next';
+import { SessionProvider } from 'next-auth/react';
 
 export const metadata: Metadata = {
     title: {
@@ -18,7 +19,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={`${quicksand.className} antialiased`}>
-                {children}
+                <SessionProvider>{children}</SessionProvider>
             </body>
         </html>
     );
