@@ -1,5 +1,10 @@
 import LoginForm from '../ui/components/login-form';
-import { Suspense } from 'react';
+import { Suspense } from 'react'
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'Logowanie',
+};
 
 export default function LoginPage() {
     return (
